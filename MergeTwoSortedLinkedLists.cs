@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HackerRank
+﻿namespace HackerRank
 {
     public static class MergeTwoSortedLinkedLists
     {
-        public void Run()
-        {
-
-        }
-
         static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
         {
             var result = new SinglyLinkedList();
