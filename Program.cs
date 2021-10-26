@@ -13,7 +13,8 @@ namespace ConsoleApp1
             //RecursiveDigitSum.Run();
             //NewYearChaos.Run();
             //QueueUsingTwoStacks.Run();
-            BalancedBrackets.Run();
+            //BalancedBrackets.Run();
+            SimpleTextEditor.Run();
         }
     }
 }
