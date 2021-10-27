@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HackerRank
+namespace HackerRank.Collections
 {
     public class Queue<T>
     {

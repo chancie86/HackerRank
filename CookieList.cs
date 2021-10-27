@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HackerRank.Collections;
 
-namespace ConsoleApp1
+namespace HakerRank
 {
     public class CookieList
     {

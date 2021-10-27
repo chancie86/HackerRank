@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp1
+namespace HackerRank.Collections
 {
     public class MinHeap<T>
         where T : IComparable<T>

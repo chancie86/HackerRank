@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HackerRank.Collections;
 
-namespace ConsoleApp1
+namespace HackerRank
 {
     public static class JesseAndCookies
     {

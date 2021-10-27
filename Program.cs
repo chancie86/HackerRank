@@ -14,7 +14,8 @@ namespace ConsoleApp1
             //NewYearChaos.Run();
             //QueueUsingTwoStacks.Run();
             //BalancedBrackets.Run();
-            SimpleTextEditor.Run();
+            //SimpleTextEditor.Run();
+            TreeHuffmanDecoding.Run();
         }
     }
 }

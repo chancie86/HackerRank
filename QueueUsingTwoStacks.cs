@@ -45,7 +45,7 @@ namespace HackerRank
 
         private static void Start(IEnumerable<(Operation, int?)> instructions)
         {
-            var queue = new Queue<int>();
+            var queue = new Collections.Queue<int>();
 
             foreach (var instruction in instructions)
             {
