@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace ConsoleApp1
+namespace HackerRank
 {
     public static class NewYearChaos
     {

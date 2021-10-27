@@ -1,12 +1,11 @@
 ﻿using HackerRank;
 
-namespace ConsoleApp1
+namespace HackerRank
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            //JesseAndCookies.Run();
             //TowerBreakers.Run();
             //CaesarCipher.Run();
             //GridChallenge.Run();
@@ -15,6 +14,7 @@ namespace ConsoleApp1
             //QueueUsingTwoStacks.Run();
             //BalancedBrackets.Run();
             //SimpleTextEditor.Run();
+            //JesseAndCookies.Run();
             //TreeHuffmanDecoding.Run();
             TreePreorderTraversal.Run();
         }
