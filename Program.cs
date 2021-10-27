@@ -15,7 +15,8 @@ namespace ConsoleApp1
             //QueueUsingTwoStacks.Run();
             //BalancedBrackets.Run();
             //SimpleTextEditor.Run();
-            TreeHuffmanDecoding.Run();
+            //TreeHuffmanDecoding.Run();
+            TreePreorderTraversal.Run();
         }
     }
 }
