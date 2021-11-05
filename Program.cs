@@ -1,4 +1,5 @@
 ﻿using HackerRank;
+using HackerRank.Day6;
 
 namespace HackerRank
 {
@@ -16,7 +17,7 @@ namespace HackerRank
             //SimpleTextEditor.Run();
             //JesseAndCookies.Run();
             //TreeHuffmanDecoding.Run();
-            TreePreorderTraversal.Run();
+            //TreePreorderTraversal.Run();
         }
     }
 }

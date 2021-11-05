@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace HackerRank
+namespace HackerRank.Day6
 {
     public static partial class SimpleTextEditor
     {
@@ -61,7 +61,7 @@ namespace HackerRank
                 //    "4 ",
                 //    "3 1"
                 //},
-                File.ReadAllLines("SimpleTextEditor_input09.txt")
+                File.ReadAllLines("Day6\\SimpleTextEditor_input09.txt")
             };
         }
         #endregion

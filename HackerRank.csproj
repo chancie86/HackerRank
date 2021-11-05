@@ -14,7 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="SimpleTextEditor_input09.txt">
+    <None Update="Day6\JesseCookiesTestCase18.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day6\JesseCookiesTestCase10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day6\SimpleTextEditor_input09.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

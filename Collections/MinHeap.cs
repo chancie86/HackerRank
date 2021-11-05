@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HackerRank.Day6;
 
 namespace HackerRank.Collections
 {
     public class MinHeap<T>
+        : ISortedCollection<T>
         where T : IComparable<T>
     {
         private readonly List<T> _elements;
@@ -14,16 +16,28 @@ namespace HackerRank.Collections
             _elements = new List<T>();
         }
 
+        public MinHeap(IEnumerable<T> items)
+        {
+            _elements = new List<T>();
+            AddRange(items);
+        }
+
         public bool IsEmpty => _elements.Any();
 
         public T Peek => _elements[0];
+
+        public T RemoveFirst()
+        {
+            return Poll();
+        }
 
         public int Count => _elements.Count;
 
         public T Poll()
         {
             var result = _elements[0];
-            _elements.RemoveAt(0);
+            _elements[0] = _elements.Last();
+            _elements.RemoveAt(_elements.Count - 1);
 
             HeapifyDown();
 
