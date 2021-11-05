@@ -1,4 +1,5 @@
 ﻿using HackerRank;
+using HackerRank.Day4;
 using HackerRank.Day6;
 
 namespace HackerRank
