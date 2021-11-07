@@ -18,9 +18,10 @@ namespace HackerRank.Day6
             var testNumber = 1;
             foreach (var test in TestCases())
             {
+                var start = DateTime.UtcNow;
                 Console.WriteLine($"Test {testNumber++}, n: {test.height}, m: {test.width}");
                 var result = legoBlocks(test.height, test.width);
-                Console.WriteLine(result);
+                Console.WriteLine($"Answer: {result}, Completed in: {DateTime.UtcNow - start}");
             }
         }
 
@@ -28,21 +29,7 @@ namespace HackerRank.Day6
         {
             var validRows = new List<Row>();
             GetValidRows(new Row(width), validRows);
-
-            //foreach (var row in validRows)
-            //{
-            //    Console.WriteLine($"Valid row: {row}");
-            //}
-
-            var validWalls = new List<Wall>();
             return GetValidWalls(validRows, new Wall(height));
-
-            //foreach (var wall in validWalls)
-            //{
-            //    Console.WriteLine($"Valid wall:\n{wall}");
-            //}
-
-            //return validWalls.Count();
         }
 
         public static int GetValidWalls(IList<Row> validRows, Wall wall)
@@ -59,7 +46,7 @@ namespace HackerRank.Day6
                 var newWall = new Wall(wall);
                 newWall.AddRow(row);
 
-                if (newWall.IsSolid())
+                if (newWall.IsSolid(newWall.CurrentHeight - 1))
                 {
                     var remainingRows = newWall.MaxHeight - newWall.CurrentHeight;
                     result += (int)Math.Pow(validRows.Count, remainingRows);
@@ -102,7 +89,7 @@ namespace HackerRank.Day6
                 //(4, 4),
                 //(4, 5),
                 //(4, 6),
-                (4, 7),
+                    (4, 7),
                 //(5, 4),
                 //(6, 4),
                 //(7, 4)
@@ -218,17 +205,24 @@ namespace HackerRank.Day6
         {
             private readonly List<Row> _rows;
             private readonly int _maxHeight;
+            private List<BlockMeta> _firstRowBlockMeta;
 
             public Wall(int maxHeight)
             {
-                _rows = new List<Row>();
                 _maxHeight = maxHeight;
+                _rows = new List<Row>(_maxHeight);
+                _firstRowBlockMeta = new List<BlockMeta>(_maxHeight);
             }
 
             public Wall(Wall wall)
                 : this(wall._maxHeight)
             {
                 _rows.AddRange(wall._rows);
+                _firstRowBlockMeta.AddRange(wall._firstRowBlockMeta.Select(bm => new BlockMeta(bm.Block)
+                {
+                    LeftEdgeCovered = bm.LeftEdgeCovered,
+                    RightEdgeCovered = bm.RightEdgeCovered
+                }));
             }
 
             public int CurrentHeight => _rows.Count;
@@ -245,27 +239,43 @@ namespace HackerRank.Day6
                 }
 
                 _rows.Add(row);
+
+                if (CurrentHeight == 1)
+                {
+                    _firstRowBlockMeta.AddRange(row.Blocks.Select(b => new BlockMeta(b)));
+                }
             }
 
-            public bool IsSolid() 
+            public bool IsSolid(int startRowIndex)
             {
-                if (_rows.Count == 1
-                    && _rows.First().Blocks.Count == 1)
+                if (_rows.First().Blocks.Count == 1)
                 {
                     return true;
                 }
 
-                var uncoveredBlocks = _rows.First().Blocks.Select(b => new BlockMeta(b)).ToList();
+                var uncoveredBlocks = _firstRowBlockMeta;
 
-                for (var rowNumber = 1; rowNumber < _rows.Count; rowNumber++)
+                for (var rowNumber = startRowIndex; rowNumber < _rows.Count; rowNumber++)
                 {
                     var currentRow = _rows[rowNumber];
+                    if (currentRow.Blocks.Count == 1)
+                    {
+                        // Block covers entire width of the wall
+                        return true;
+                    }
 
                     foreach (var block in currentRow.Blocks)
                     {
                         var idx = 0;
                         while (idx < uncoveredBlocks.Count)
                         {
+                            if (block.Width == 1)
+                            {
+                                // Blocks of width 1 cannot cover any edges
+                                idx++;
+                                continue;
+                            }
+
                             var uncoveredBlock = uncoveredBlocks[idx];
 
                             uncoveredBlock.LeftEdgeCovered |= uncoveredBlock.CoversLeftEdge(block);
