@@ -37,7 +37,8 @@ namespace HackerRank
             var challenges = new IChallenge[]
             {
                 //new PlusMinus(),
-                new MiniMaxSum(),
+                //new MiniMaxSum(),
+                new TimeConversion(),
             };
 
             foreach (var challenge in challenges)
