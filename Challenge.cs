@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 namespace HackerRank
 {
@@ -10,7 +12,6 @@ namespace HackerRank
 
     public abstract class Challenge<TInput, TOutput>
         : IChallenge
-        where TOutput : IComparable
     {
         public void Start()
         {
@@ -20,14 +21,35 @@ namespace HackerRank
             {
                 Console.WriteLine($"Test: {testNumber++}");
                 var result = Run(test.input);
-                var success = result.CompareTo(test.expectedResult) == 0;
-                Console.WriteLine($"Result: {(success ? "PASS" : "FAIL")}, Output: {result}");
+                var success = test.expectedResult.Equals(result);
+
+                Console.WriteLine($"Result: {(success ? "PASS" : "FAIL")}");
+
+                if (result is IEnumerable convertedResult)
+                {
+                    Console.WriteLine($"Output:\n{StringifyEnumerable(convertedResult)}");
+                }
+                else
+                {
+                    Console.WriteLine($"Output: {result}");
+                }
             }
         }
 
         protected abstract TOutput Run(TInput input);
 
         public abstract IEnumerable<(TInput input, TOutput expectedResult)> TestCases();
+
+        public static string StringifyEnumerable(IEnumerable list)
+        {
+            var sb = new StringBuilder();
+            foreach (var item in list)
+            {
+                sb.AppendLine(item.ToString());
+            }
+
+            return sb.ToString();
+        }
     }
 
     public abstract class Challenge<TInput>

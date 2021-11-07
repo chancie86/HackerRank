@@ -38,7 +38,8 @@ namespace HackerRank
             {
                 //new PlusMinus(),
                 //new MiniMaxSum(),
-                new TimeConversion(),
+                //new TimeConversion(),
+                new SparseArrays(),
             };
 
             foreach (var challenge in challenges)
