@@ -1,4 +1,5 @@
 ﻿using HackerRank;
+using HackerRank.OneMonthPreparationKit.Week1;
 using HackerRank.OneWeekPreparationKit;
 using HackerRank.OneWeekPreparationKit.Day3;
 using HackerRank.OneWeekPreparationKit.Day4;
@@ -12,6 +13,11 @@ namespace HackerRank
     {
         public static void Main(string[] args)
         {
+            OneMonthPreparationKit();
+        }
+
+        public static void OneWeekPreparationKit()
+        {
             TowerBreakers.Run();
             CaesarCipher.Run();
             GridChallenge.Run();
@@ -24,6 +30,19 @@ namespace HackerRank
             JesseAndCookies.Run();
             TreeHuffmanDecoding.Run();
             TreePreorderTraversal.Run();
+        }
+
+        public static void OneMonthPreparationKit()
+        {
+            var challenges = new[]
+            {
+                new PlusMinus(),
+            };
+
+            foreach (var challenge in challenges)
+            {
+                challenge.Start();
+            }
         }
     }
 }
