@@ -3,10 +3,16 @@ using System.Collections.Generic;
 
 namespace HackerRank
 {
+    public interface IChallenge
+    {
+        void Start();
+    }
+
     public abstract class Challenge<TInput, TOutput>
+        : IChallenge
         where TOutput : IComparable
     {
-        public virtual void Start()
+        public void Start()
         {
             var testNumber = 1;
 
@@ -25,6 +31,7 @@ namespace HackerRank
     }
 
     public abstract class Challenge<TInput>
+        : IChallenge
     {
         public virtual void Start()
         {

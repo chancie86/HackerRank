@@ -34,9 +34,10 @@ namespace HackerRank
 
         public static void OneMonthPreparationKit()
         {
-            var challenges = new[]
+            var challenges = new IChallenge[]
             {
-                new PlusMinus(),
+                //new PlusMinus(),
+                new MiniMaxSum(),
             };
 
             foreach (var challenge in challenges)
