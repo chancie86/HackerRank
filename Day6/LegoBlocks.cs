@@ -35,37 +35,42 @@ namespace HackerRank.Day6
             //}
 
             var validWalls = new List<Wall>();
-            GetValidWalls(validRows, new Wall(height), validWalls);
+            return GetValidWalls(validRows, new Wall(height));
 
             //foreach (var wall in validWalls)
             //{
             //    Console.WriteLine($"Valid wall:\n{wall}");
             //}
 
-            return validWalls.Count();
+            //return validWalls.Count();
         }
 
-        public static void GetValidWalls(IList<Row> validRows, Wall wall, IList<Wall> result)
+        public static int GetValidWalls(IList<Row> validRows, Wall wall)
         {
             if (wall.IsFull)
             {
-                if (wall.IsSolid())
-                {
-                    result.Add(wall);
-                }
-                
-                return;
+                return 0;
             }
+
+            var result = 0;
 
             foreach (var row in validRows)
             {
-                if (!wall.IsFull)
+                var newWall = new Wall(wall);
+                newWall.AddRow(row);
+
+                if (newWall.IsSolid())
                 {
-                    var newWall = new Wall(wall);
-                    newWall.AddRow(row);
-                    GetValidWalls(validRows, newWall, result);
+                    var remainingRows = newWall.MaxHeight - newWall.CurrentHeight;
+                    result += (int)Math.Pow(validRows.Count, remainingRows);
+                }
+                else
+                {
+                    result += GetValidWalls(validRows, newWall);
                 }
             }
+
+            return result;
         }
 
         public static void GetValidRows(Row row, IList<Row> result)
@@ -91,14 +96,13 @@ namespace HackerRank.Day6
         {
             return new List<(int, int)>()
             {
-                (3,3)
                 //(2, 2),
                 //(3, 2),
                 //(2, 3),
                 //(4, 4),
                 //(4, 5),
                 //(4, 6),
-                    //(4, 7),
+                (4, 7),
                 //(5, 4),
                 //(6, 4),
                 //(7, 4)
@@ -243,8 +247,14 @@ namespace HackerRank.Day6
                 _rows.Add(row);
             }
 
-            public bool IsSolid()
+            public bool IsSolid() 
             {
+                if (_rows.Count == 1
+                    && _rows.First().Blocks.Count == 1)
+                {
+                    return true;
+                }
+
                 var uncoveredBlocks = _rows.First().Blocks.Select(b => new BlockMeta(b)).ToList();
 
                 for (var rowNumber = 1; rowNumber < _rows.Count; rowNumber++)
