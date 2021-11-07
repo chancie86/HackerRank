@@ -16,6 +16,7 @@ namespace HackerRank
             //QueueUsingTwoStacks.Run();
             //BalancedBrackets.Run();
             //SimpleTextEditor.Run();
+            LegoBlocks.Run();
             //JesseAndCookies.Run();
             //TreeHuffmanDecoding.Run();
             //TreePreorderTraversal.Run();
