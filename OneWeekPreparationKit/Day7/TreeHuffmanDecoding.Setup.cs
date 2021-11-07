@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using HackerRank.Collections;
-using HackerRank.Huffman;
+using HackerRank.OneWeekPreparationKit.Day7.Huffman;
 
-namespace HackerRank
+namespace HackerRank.OneWeekPreparationKit.Day7
 {
     public static partial class TreeHuffmanDecoding
     {

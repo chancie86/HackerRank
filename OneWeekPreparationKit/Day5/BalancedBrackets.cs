@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HackerRank
+namespace HackerRank.OneWeekPreparationKit.Day5
 {
     public static class BalancedBrackets
     {

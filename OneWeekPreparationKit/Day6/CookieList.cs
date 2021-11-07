@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using HackerRank.Collections;
 
-namespace HackerRank.Day6
+namespace HackerRank.OneWeekPreparationKit.Day6
 {
     public class CookieList
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HackerRank
+namespace HackerRank.OneWeekPreparationKit.Day3
 {
     public static class CaesarCipher
     {

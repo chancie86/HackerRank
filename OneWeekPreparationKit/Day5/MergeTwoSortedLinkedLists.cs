@@ -1,4 +1,4 @@
-﻿namespace HackerRank
+﻿namespace HackerRank.OneWeekPreparationKit.Day5
 {
     public static class MergeTwoSortedLinkedLists
     {

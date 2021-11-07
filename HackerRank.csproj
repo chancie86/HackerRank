@@ -10,17 +10,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Huffman\Node.cs" />
+    <None Include="OneWeekPreparationKit\Day7\Huffman\Node.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Day6\JesseCookiesTestCase18.txt">
+    <None Update="OneWeekPreparationKit\Day6\JesseCookiesTestCase18.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Day6\JesseCookiesTestCase10.txt">
+    <None Update="OneWeekPreparationKit\Day6\JesseCookiesTestCase10.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Day6\SimpleTextEditor_input09.txt">
+    <None Update="OneWeekPreparationKit\Day6\SimpleTextEditor_input09.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

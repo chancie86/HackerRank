@@ -217,7 +217,7 @@ namespace HackerRank.Collections
 
             public Node<T> Current => _current;
 
-            object? IEnumerator.Current => Current;
+            object IEnumerator.Current => Current;
 
             public void Dispose()
             {

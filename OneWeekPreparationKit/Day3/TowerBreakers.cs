@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HackerRank
+namespace HackerRank.OneWeekPreparationKit.Day3
 {
     public static class TowerBreakers
     {
@@ -69,7 +69,7 @@ namespace HackerRank
 
         private static List<(int, int)> TestData()
         {
-            return new List<(int, int)>() { (2,2) };
+            //return new List<(int, int)>() { (2,2) };
 
             var tests = new[]
             {

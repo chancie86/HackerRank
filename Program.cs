@@ -1,6 +1,10 @@
 ﻿using HackerRank;
-using HackerRank.Day4;
-using HackerRank.Day6;
+using HackerRank.OneWeekPreparationKit;
+using HackerRank.OneWeekPreparationKit.Day3;
+using HackerRank.OneWeekPreparationKit.Day4;
+using HackerRank.OneWeekPreparationKit.Day5;
+using HackerRank.OneWeekPreparationKit.Day6;
+using HackerRank.OneWeekPreparationKit.Day7;
 
 namespace HackerRank
 {
@@ -8,18 +12,18 @@ namespace HackerRank
     {
         public static void Main(string[] args)
         {
-            //TowerBreakers.Run();
-            //CaesarCipher.Run();
-            //GridChallenge.Run();
-            //RecursiveDigitSum.Run();
-            //NewYearChaos.Run();
-            //QueueUsingTwoStacks.Run();
-            //BalancedBrackets.Run();
-            //SimpleTextEditor.Run();
+            TowerBreakers.Run();
+            CaesarCipher.Run();
+            GridChallenge.Run();
+            RecursiveDigitSum.Run();
+            NewYearChaos.Run();
+            QueueUsingTwoStacks.Run();
+            BalancedBrackets.Run();
+            SimpleTextEditor.Run();
             LegoBlocks.Run();
-            //JesseAndCookies.Run();
-            //TreeHuffmanDecoding.Run();
-            //TreePreorderTraversal.Run();
+            JesseAndCookies.Run();
+            TreeHuffmanDecoding.Run();
+            TreePreorderTraversal.Run();
         }
     }
 }

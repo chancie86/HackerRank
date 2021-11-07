@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HackerRank.Huffman
+namespace HackerRank.OneWeekPreparationKit.Day7.Huffman
 {
     public abstract class Node
         : IComparable<Node>

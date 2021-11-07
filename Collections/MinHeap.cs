@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using HackerRank.Day6;
+using HackerRank.OneWeekPreparationKit.Day6;
 
 namespace HackerRank.Collections
 {

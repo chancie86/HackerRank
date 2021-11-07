@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace HackerRank.Day6
+namespace HackerRank.OneWeekPreparationKit.Day6
 {
     class LegoBlocks
     {

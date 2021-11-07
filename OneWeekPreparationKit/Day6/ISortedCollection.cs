@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HackerRank.Day6
+namespace HackerRank.OneWeekPreparationKit.Day6
 {
     public interface ISortedCollection<T>
     {

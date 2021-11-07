@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HackerRank.Day4
+namespace HackerRank.OneWeekPreparationKit.Day4
 {
     public static class NewYearChaos
     {

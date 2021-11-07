@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HackerRank.Day6
+namespace HackerRank.OneWeekPreparationKit.Day6
 {
     public class SortedList<T>
         : ISortedCollection<T>

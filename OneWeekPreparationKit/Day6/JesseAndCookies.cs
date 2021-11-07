@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using HackerRank.Collections;
 
-namespace HackerRank.Day6
+namespace HackerRank.OneWeekPreparationKit.Day6
 {
     public static class JesseAndCookies
     {
@@ -58,8 +58,8 @@ namespace HackerRank.Day6
             {
                 (9, new [] { 2, 7, 3, 6, 4, 6 }),
                 (7, new [] { 1, 2, 3, 9, 10, 12 }),
-                (1059589, ReadValuesFromFile("Day6\\TestCase10.txt")),
-                (105823341, ReadValuesFromFile("Day6\\TestCase18.txt")),
+                (1059589, ReadValuesFromFile("OneWeekPreparationKit\\Day6\\TestCase10.txt")),
+                (105823341, ReadValuesFromFile("OneWeekPreparationKit\\Day6\\TestCase18.txt")),
             };
         }
 

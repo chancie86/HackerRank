@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace HackerRank
+namespace HackerRank.OneWeekPreparationKit.Day7
 {
     public static partial class TreePreorderTraversal
     {
