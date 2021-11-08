@@ -43,7 +43,8 @@ namespace HackerRank
                 //new LonelyInteger(),
                 //new FlippingBits(),
                 //new DiagonalDifference(),
-                new CountingSort1(),
+                //new CountingSort1(),
+                new Pangram(),
             };
 
             foreach (var challenge in challenges)

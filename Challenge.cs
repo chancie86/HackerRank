@@ -25,7 +25,11 @@ namespace HackerRank
 
                 Console.WriteLine($"Result: {(success ? "PASS" : "FAIL")}");
 
-                if (result is IEnumerable convertedResult)
+                if (result is string)
+                {
+                    Console.WriteLine($"Output: {result}");
+                } 
+                else if (result is IEnumerable convertedResult)
                 {
                     Console.WriteLine($"Output:\n{StringifyEnumerable(convertedResult)}");
                 }
