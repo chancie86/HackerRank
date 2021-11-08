@@ -42,7 +42,8 @@ namespace HackerRank
                 //new SparseArrays(),
                 //new LonelyInteger(),
                 //new FlippingBits(),
-                new DiagonalDifference(),
+                //new DiagonalDifference(),
+                new CountingSort1(),
             };
 
             foreach (var challenge in challenges)
