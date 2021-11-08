@@ -1,5 +1,6 @@
 ﻿using HackerRank;
 using HackerRank.OneMonthPreparationKit.Week1;
+using HackerRank.OneMonthPreparationKit.Week4;
 using HackerRank.OneWeekPreparationKit;
 using HackerRank.OneWeekPreparationKit.Day3;
 using HackerRank.OneWeekPreparationKit.Day4;
@@ -44,7 +45,8 @@ namespace HackerRank
                 //new FlippingBits(),
                 //new DiagonalDifference(),
                 //new CountingSort1(),
-                new Pangram(),
+                //new Pangram(),
+                new EqualStacks(),
             };
 
             foreach (var challenge in challenges)
