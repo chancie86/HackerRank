@@ -7,6 +7,7 @@ using HackerRank.OneWeekPreparationKit.Day4;
 using HackerRank.OneWeekPreparationKit.Day5;
 using HackerRank.OneWeekPreparationKit.Day6;
 using HackerRank.OneWeekPreparationKit.Day7;
+using HackerRank.Other;
 
 namespace HackerRank
 {
@@ -14,7 +15,8 @@ namespace HackerRank
     {
         public static void Main(string[] args)
         {
-            OneMonthPreparationKit();
+            //OneMonthPreparationKit();
+            (new Countdown()).Start();
         }
 
         public static void OneWeekPreparationKit()
